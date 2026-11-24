@@ -1,0 +1,31 @@
+{
+  "name": "vitalyes-patient-registration",
+  "version": "1.0.0",
+  "description": "Vitalyes Patient Registration & Invoicing Module - Interactive Prototype (JSON database, Node.js)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "reset-db": "node -e \"const fs=require('fs');const p=require('path');['appointments.json','invoices.json','payments.json','tokens.json','funnel-events.json'].forEach(f=>fs.writeFileSync(p.join('data',f),'[]\\n'));console.log('Transactional data reset');\""
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "india-state-district": "^1.0.5",
+    "libphonenumber-js": "^1.13.16",
+    "openid-client": "^5.7.1"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  },
+  "keywords": [
+    "vitalyes",
+    "hospital",
+    "patient-registration",
+    "prototype"
+  ],
+  "author": "Vitalyes",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
